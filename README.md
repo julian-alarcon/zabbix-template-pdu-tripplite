@@ -4,7 +4,7 @@
     Language: XML
     License: MIT
 
-This template provides monitoring of Tripp Lite PDUs. It may work for other manufacturers.
+This template provides monitoring of Tripp Lite PDUs using Zabbix. It may work for other manufacturers.
 It was tested on the PDU with reference PDUMNV20 of Tripp Lite.(https://www.tripplite.com/1.9kw-single-phase-monitored-pdu-120v-outlets-24-5-15-20r-l5-20p-5-20p-adapter-0u-vertical-70-in-taa~PDUMNV20/)
 
 The firmware used on the PDU was version 12.06.0069 of 2016-02-08.
