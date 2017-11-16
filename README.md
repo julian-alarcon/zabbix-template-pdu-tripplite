@@ -57,25 +57,35 @@ You are able of set personal values using the specific macros values for your de
 
 This is the list of available macros and their default values:
 
-Name: `{$SNMP_COMMUNITY}`
-Default value: `tripplite`
-Description: Value of SNMP community, if you change your default community in the PDU you must setup the define in Zabbix the new value for your device.
+* Name: `{$SNMP_COMMUNITY}`
 
-Name: `{$MAX_INPUTVOLTAGE}`
-Default value: `125`
-Description: If the Input Voltage is above this value, you will get an alarm of severity High from Zabbix.
+  Default value: `tripplite`
 
-Name: `{$MIN_INPUTVOLTAGE}`
-Default value: `115`
-Description: If the Input Voltage is below this value, you will get an alarm of severity High from Zabbix.
+  Description: Value of SNMP community, if you change your default community in the PDU you must setup the define in Zabbix the new value for your device.
 
-Name: `{$MAX_OUTPUTCURRENT_WARNING}`
-Default value: `15`
-Description: If the Input Voltage is above this value, you will get an alarm of severity Warning from Zabbix.
+* Name: `{$MAX_INPUTVOLTAGE}`
 
-Name: `{$MAX_OUTPUTCURRENT_CRITICAL}`
-Default value: `18`
-Description: If the Input Voltage is above this value, you will get an alarm  of severity High from Zabbix.
+  Default value: `125`
+
+  Description: If the Input Voltage is above this value, you will get an alarm of severity High from Zabbix.
+
+* Name: `{$MIN_INPUTVOLTAGE}`
+
+  Default value: `115`
+
+  Description: If the Input Voltage is below this value, you will get an alarm of severity High from Zabbix.
+
+* Name: `{$MAX_OUTPUTCURRENT_WARNING}`
+
+  Default value: `15`
+
+  Description: If the Input Voltage is above this value, you will get an alarm of severity Warning from Zabbix.
+
+* Name: `{$MAX_OUTPUTCURRENT_CRITICAL}`
+
+  Default value: `18`
+  
+  Description: If the Input Voltage is above this value, you will get an alarm  of severity High from Zabbix.
 
 ## Static values
 
