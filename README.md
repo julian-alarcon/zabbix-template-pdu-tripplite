@@ -5,12 +5,12 @@
     License: MIT
 
 This template provides monitoring of Tripp Lite PDUs using Zabbix. It may work for other manufacturers.
-It was tested on the PDU with reference PDUMNV20 of Tripp Lite.(https://www.tripplite.com/1.9kw-single-phase-monitored-pdu-120v-outlets-24-5-15-20r-l5-20p-5-20p-adapter-0u-vertical-70-in-taa~PDUMNV20/)
+It was tested on the PDU with reference PDUMNV20 of Tripp Lite.[Tripp LPDUMNV20 information](https://www.tripplite.com/1.9kw-single-phase-monitored-pdu-120v-outlets-24-5-15-20r-l5-20p-5-20p-adapter-0u-vertical-70-in-taa~PDUMNV20/)
 
 The firmware used on the PDU was version 12.06.0069 of 2016-02-08.
 
 Minimum version of Zabbix is 3.0.
-It uses the Zabbix Core SNMP Templates 	Template SNMP Interfaces and Template SNMP Generic.
+It uses the Zabbix Core SNMP Templates Template SNMP Interfaces and Template SNMP Generic.
 
 This is based in 2 files, one from Zabbix Share and another from the forum plus information from other places.
 
@@ -53,7 +53,7 @@ This template allows to monitor:
 
 ## Variable values (Macros)
 
-You are able of set personal values using the specific macros values for your devices. (https://www.zabbix.com/documentation/3.0/manual/config/macros/usermacros)
+You are able of set personal values using the specific macros values for your devices. [Zabbix macros documentation](https://www.zabbix.com/documentation/3.0/manual/config/macros/usermacros)
 
 This is the list of available macros and their default values:
 
@@ -84,7 +84,7 @@ This is the list of available macros and their default values:
 * Name: `{$MAX_OUTPUTCURRENT_CRITICAL}`
 
   Default value: `18`
-  
+
   Description: If the Input Voltage is above this value, you will get an alarm  of severity High from Zabbix.
 
 ## Static values
@@ -101,19 +101,22 @@ SNMP values returned by the PDU of the Frecuency and Current are missing one dec
 I used the Zabbix multiplier and function properties to show in graphs and the alarms the righ values. You can remove it if you want.
 
 To get the original SNMP data change the next values from the template:
-```
+
+```xml
 <multiplier>1</multiplier>
 <formula>0.1</formula>
 ```
+
 to :
-```
+
+```xml
 <multiplier>0</multiplier>
 <formula>1</formula>
 ```
 
 ## SNMP example values
 
-```
+```bash
 [root@zabbixserver ~]# snmpwalk -Os -c triplite -v 2c 10.0.0.1 | grep mib
 mib-2.33.1.1.1.0 = STRING: "TRIPP LITE"
 mib-2.33.1.1.2.0 = STRING: "PDUMNV20"
@@ -136,11 +139,11 @@ mib-2.33.1.9.9.0 = INTEGER: 70
 
 mib-2 correspond to the OID: .1.3.6.1.2.1
 
-# Sources
+## Sources
 
-* https://www.tripplite.com/support/SNMPWEBCARD
-* https://www.zabbix.com/forum/showthread.php?t=53910
-* https://www.zabbix.com/forum/attachment.php?attachmentid=9129&d=1466024491
-* https://share.zabbix.com/power-ups/tripplite-ups
-* http://pydoc.net/pysnmp-mibs/0.1.6/pysnmp_mibs.UPS-MIB/
-* https://www.zabbix.com/documentation/3.0/manual/config/items/item
+* [Tripp Lite SNMPWEBCARD website](https://www.tripplite.com/support/SNMPWEBCARD)
+* [Zabbix Forum with Tripp Lite UPS help](https://www.zabbix.com/forum/showthread.php?t=53910)
+* [Attachment of Zabbix Template in Zabbix Forum of Tripp Lite UPS](https://www.zabbix.com/forum/attachment.php?attachmentid=9129&d=1466024491)
+* [Zabbix Teamplate in Zabbix website](https://share.zabbix.com/power-ups/tripplite-ups)
+* [Documentation of UPS-MIB](http://pydoc.net/pysnmp-mibs/0.1.6/pysnmp_mibs.UPS-MIB/)
+* [Zabbix 3.0 Documentation of item configuration](https://www.zabbix.com/documentation/3.0/manual/config/items/item)
