@@ -139,7 +139,7 @@ mib-2.33.1.9.9.0 = INTEGER: 70
 
 mib-2 correspond to the OID: .1.3.6.1.2.1
 
-## Sources
+## Documentation
 
 * [Tripp Lite SNMPWEBCARD website](https://www.tripplite.com/support/SNMPWEBCARD)
 * [Zabbix Forum with Tripp Lite UPS help](https://www.zabbix.com/forum/showthread.php?t=53910)
